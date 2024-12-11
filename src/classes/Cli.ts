@@ -304,6 +304,7 @@ class Cli {
         if (answers.vehicleToTow instanceof Truck) {
         // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
         console.log("A truck cannot tow itself");
+        this.performActions();
         } else {
         // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
         truck.tow(answers.vehicleToTow);
@@ -398,19 +399,24 @@ class Cli {
         }
         // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
         else if (answers.action === 'Tow') {
-          if (this.vehicles instanceof Truck) {
-            this.findVehicleToTow(this.vehicles);
+          const selectedVehicle = this.vehicles.find(vehicle => vehicle.vin === this.selectedVehicleVin);
+          if (selectedVehicle instanceof Truck) {
+            this.findVehicleToTow(selectedVehicle);
             return;
           } else {
-            console.log("You can only tow with a truck");
+            console.log("Only trucks can tow");
           }
         }
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         else if (answers.action === 'Wheelie') {
-          if (this.vehicles instanceof Motorbike) {
-            this.vehicles.wheelie();
+          const selectedVehicle = this.vehicles.find(vehicle => vehicle.vin === this.selectedVehicleVin);
+          if (selectedVehicle instanceof Motorbike) {
+            const selectedVehicle = this.vehicles.find(vehicle => vehicle.vin === this.selectedVehicleVin);
+            if (selectedVehicle instanceof Motorbike) {
+              selectedVehicle.wheelie();
+            }
           } else {
-            console.log("You can only perform a wheelie with a motorbike");
+            console.log("Only motorbikes can do a wheelie");
           }
         }
         else if (answers.action === 'Select or create another vehicle') {
