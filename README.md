@@ -12,7 +12,7 @@ I wanted to update this vehicle builder to include trucks and motorbikes, so it 
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Credits](#credits)
-- [Video Walkthrough](#videowalkthrough)
+- [Video Walkthrough](#video-walkthrough)
 - [Questions](#questions)
 
 ## Installation
