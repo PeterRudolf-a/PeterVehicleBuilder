@@ -14,7 +14,7 @@ Provide a short description explaining the what, why, and how of your project. U
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
+- [Video Walkthrough](#videowalkthrough)
 
 ## Installation
 
@@ -32,11 +32,6 @@ If you used any third-party assets that require attribution, list the creators w
 
 If you followed tutorials, include links to those here as well.
 
-## License
-MIT License
+## Video Walkthrough
 
-Copyright (c) 2024 PeterRudolf-a
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+https://app.screencastify.com/v3/watch/I2Q6J3MtGu7dEH0pRVL2 
